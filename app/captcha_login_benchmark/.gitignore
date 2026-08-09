@@ -1,0 +1,4 @@
+.hvigor/
+**/build/
+**/oh_modules/
+local.properties

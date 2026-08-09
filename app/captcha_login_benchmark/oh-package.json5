@@ -1,0 +1,11 @@
+{
+  "modelVersion": "5.0.5",
+  "name": "captcha-login-benchmark",
+  "version": "1.0.0",
+  "description": "Controlled graphical captcha and slider-puzzle login benchmark",
+  "main": "",
+  "author": "hmtest",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {}
+}

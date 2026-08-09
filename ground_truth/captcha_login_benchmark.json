@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "app": {
+    "id": "captcha_login_benchmark",
+    "revision": "1715d28711e02a961457a6c385d89da55870cba5",
+    "bundle_name": "com.hmtest.captchalogin"
+  },
+  "derivation": "static_source_review",
+  "verification_status": "verified",
+  "hierarchy": [
+    {
+      "id": "root:captcha_login",
+      "name": "验证码登录 Benchmark",
+      "kind": "root",
+      "verification": "verified",
+      "implementation_status": "implemented",
+      "evidence": [{ "kind": "trace", "ref": "ground_truth/evidence/captcha_login_benchmark/success.json" }],
+      "children": [
+        {
+          "id": "page:login",
+          "name": "账号与图形验证码登录",
+          "kind": "page",
+          "verification": "verified",
+          "implementation_status": "implemented",
+          "evidence": [{ "kind": "ui_tree", "ref": "ground_truth/evidence/captcha_login_benchmark/login.json" }],
+          "children": [
+            {
+              "id": "function:input_credentials",
+              "name": "填写账号和密码",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["账号与密码输入框内容变化"],
+              "evidence": [{ "kind": "code", "ref": "entry/src/main/ets/pages/Index.ets" }],
+              "children": []
+            },
+            {
+              "id": "function:recognize_captcha",
+              "name": "识别图形验证码",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "notes": "字符仅绘制在 Canvas 中，不出现在 UI Layout 文本节点中。",
+              "evidence": [{ "kind": "screenshot", "ref": "ground_truth/evidence/captcha_login_benchmark/login.png" }],
+              "children": []
+            },
+            {
+              "id": "function:input_captcha",
+              "name": "填写图形验证码",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["验证码输入框内容变化"],
+              "evidence": [{ "kind": "ui_tree", "ref": "ground_truth/evidence/captcha_login_benchmark/login.json" }],
+              "children": []
+            },
+            {
+              "id": "function:refresh_captcha",
+              "name": "刷新图形验证码",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["Canvas 中验证码切换，输入内容清空"],
+              "evidence": [{ "kind": "code", "ref": "entry/src/main/ets/pages/Index.ets" }],
+              "children": []
+            },
+            {
+              "id": "function:submit_basic",
+              "name": "提交基础登录验证",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["正确时进入滑块拼图页面"],
+              "evidence": [{ "kind": "trace", "ref": "ground_truth/evidence/captcha_login_benchmark/puzzle.json" }],
+              "children": []
+            },
+            {
+              "id": "function:basic_error_feedback",
+              "name": "查看账号或验证码错误反馈",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["显示账号或密码错误，或图形验证码错误"],
+              "evidence": [{ "kind": "code", "ref": "entry/src/main/ets/pages/Index.ets" }],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "page:puzzle",
+          "name": "滑块拼图验证",
+          "kind": "page",
+          "verification": "verified",
+          "implementation_status": "implemented",
+          "evidence": [{ "kind": "ui_tree", "ref": "ground_truth/evidence/captcha_login_benchmark/puzzle.json" }],
+          "children": [
+            {
+              "id": "function:inspect_puzzle",
+              "name": "观察拼图块与缺口位置",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "notes": "拼图和缺口仅绘制在 Canvas 中。",
+              "evidence": [{ "kind": "screenshot", "ref": "ground_truth/evidence/captcha_login_benchmark/puzzle.png" }],
+              "children": []
+            },
+            {
+              "id": "function:drag_slider",
+              "name": "拖动滑块对齐拼图",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["拼图块随 Slider 数值移动"],
+              "evidence": [{ "kind": "ui_tree", "ref": "ground_truth/evidence/captcha_login_benchmark/puzzle.json" }],
+              "children": []
+            },
+            {
+              "id": "function:refresh_puzzle",
+              "name": "切换现实场景拼图",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["在街景、山湖与咖啡桌面之间切换并重置滑块"],
+              "evidence": [{ "kind": "code", "ref": "entry/src/main/ets/pages/Index.ets" }],
+              "children": []
+            },
+            {
+              "id": "function:puzzle_feedback",
+              "name": "查看拼图验证结果",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["显示验证通过或拼图位置不正确"],
+              "evidence": [{ "kind": "code", "ref": "entry/src/main/ets/pages/Index.ets" }],
+              "children": []
+            },
+            {
+              "id": "function:back_to_login",
+              "name": "返回基础登录页面",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["返回账号与图形验证码页面"],
+              "evidence": [{ "kind": "code", "ref": "entry/src/main/ets/pages/Index.ets" }],
+              "children": []
+            },
+            {
+              "id": "function:complete_login",
+              "name": "完成登录",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "preconditions": ["滑块拼图验证通过"],
+              "observable_effects": ["进入登录成功页面"],
+              "evidence": [{ "kind": "trace", "ref": "ground_truth/evidence/captcha_login_benchmark/success.json" }],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "page:success",
+          "name": "登录成功",
+          "kind": "page",
+          "verification": "verified",
+          "implementation_status": "implemented",
+          "evidence": [{ "kind": "ui_tree", "ref": "ground_truth/evidence/captcha_login_benchmark/success.json" }],
+          "children": [
+            {
+              "id": "function:restart",
+              "name": "重新测试登录流程",
+              "kind": "function",
+              "verification": "verified",
+              "implementation_status": "implemented",
+              "observable_effects": ["清空表单并返回登录页面"],
+              "evidence": [{ "kind": "code", "ref": "entry/src/main/ets/pages/Index.ets" }],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "workflow:captcha_login",
+          "name": "完成双重验证码登录",
+          "kind": "workflow",
+          "verification": "verified",
+          "implementation_status": "implemented",
+          "preconditions": ["输入正确测试账号、密码与当前图形验证码", "将滑块拖到视觉缺口位置"],
+          "observable_effects": ["显示登录成功"],
+          "evidence": [{ "kind": "trace", "ref": "ground_truth/evidence/captcha_login_benchmark/success.json" }],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

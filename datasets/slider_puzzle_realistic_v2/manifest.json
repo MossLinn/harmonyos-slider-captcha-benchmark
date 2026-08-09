@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "purpose": "controlled offline GUI-agent slider-puzzle localization benchmark",
+  "sample_count": 4,
+  "samples": [
+    {
+      "scene": "bridge",
+      "image_size": [
+        960,
+        540
+      ],
+      "target_percent": 38,
+      "piece_start_bbox": [
+        25,
+        180,
+        140,
+        140
+      ],
+      "gap_bbox": [
+        327,
+        180,
+        140,
+        140
+      ],
+      "drag_pixels": 302,
+      "slider_track": [
+        55,
+        600,
+        905,
+        600
+      ],
+      "target_slider_x": 378,
+      "mask_rotation_quarters": 0,
+      "files": {
+        "background": "background.png",
+        "challenge": "challenge.png",
+        "panel": "panel.png",
+        "mask": "mask.png"
+      }
+    },
+    {
+      "scene": "library",
+      "image_size": [
+        960,
+        540
+      ],
+      "target_percent": 52,
+      "piece_start_bbox": [
+        25,
+        245,
+        140,
+        140
+      ],
+      "gap_bbox": [
+        438,
+        245,
+        140,
+        140
+      ],
+      "drag_pixels": 413,
+      "slider_track": [
+        55,
+        600,
+        905,
+        600
+      ],
+      "target_slider_x": 497,
+      "mask_rotation_quarters": 1,
+      "files": {
+        "background": "background.png",
+        "challenge": "challenge.png",
+        "panel": "panel.png",
+        "mask": "mask.png"
+      }
+    },
+    {
+      "scene": "market",
+      "image_size": [
+        960,
+        540
+      ],
+      "target_percent": 67,
+      "piece_start_bbox": [
+        25,
+        150,
+        140,
+        140
+      ],
+      "gap_bbox": [
+        558,
+        150,
+        140,
+        140
+      ],
+      "drag_pixels": 533,
+      "slider_track": [
+        55,
+        600,
+        905,
+        600
+      ],
+      "target_slider_x": 624,
+      "mask_rotation_quarters": 2,
+      "files": {
+        "background": "background.png",
+        "challenge": "challenge.png",
+        "panel": "panel.png",
+        "mask": "mask.png"
+      }
+    },
+    {
+      "scene": "station",
+      "image_size": [
+        960,
+        540
+      ],
+      "target_percent": 79,
+      "piece_start_bbox": [
+        25,
+        220,
+        140,
+        140
+      ],
+      "gap_bbox": [
+        653,
+        220,
+        140,
+        140
+      ],
+      "drag_pixels": 628,
+      "slider_track": [
+        55,
+        600,
+        905,
+        600
+      ],
+      "target_slider_x": 726,
+      "mask_rotation_quarters": 3,
+      "files": {
+        "background": "background.png",
+        "challenge": "challenge.png",
+        "panel": "panel.png",
+        "mask": "mask.png"
+      }
+    }
+  ]
+}

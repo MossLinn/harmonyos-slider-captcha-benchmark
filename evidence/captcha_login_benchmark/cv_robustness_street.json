@@ -1,0 +1,192 @@
+{
+  "ground_truth_percent": 72.0,
+  "total_cases": 36,
+  "successful_detections": 36,
+  "detection_rate": 1.0,
+  "mean_absolute_error": 0.497,
+  "max_absolute_error": 0.7,
+  "within_1_percent_rate": 1.0,
+  "cases": [
+    {
+      "case": "scale=0.75,brightness=-25,blur=0,jpeg=70",
+      "prediction": 71.82,
+      "absolute_error": 0.18
+    },
+    {
+      "case": "scale=0.75,brightness=-25,blur=0,jpeg=95",
+      "prediction": 72.66,
+      "absolute_error": 0.66
+    },
+    {
+      "case": "scale=0.75,brightness=-25,blur=3,jpeg=70",
+      "prediction": 72.48,
+      "absolute_error": 0.48
+    },
+    {
+      "case": "scale=0.75,brightness=-25,blur=3,jpeg=95",
+      "prediction": 72.66,
+      "absolute_error": 0.66
+    },
+    {
+      "case": "scale=0.75,brightness=0,blur=0,jpeg=70",
+      "prediction": 71.82,
+      "absolute_error": 0.18
+    },
+    {
+      "case": "scale=0.75,brightness=0,blur=0,jpeg=95",
+      "prediction": 72.7,
+      "absolute_error": 0.7
+    },
+    {
+      "case": "scale=0.75,brightness=0,blur=3,jpeg=70",
+      "prediction": 72.48,
+      "absolute_error": 0.48
+    },
+    {
+      "case": "scale=0.75,brightness=0,blur=3,jpeg=95",
+      "prediction": 72.66,
+      "absolute_error": 0.66
+    },
+    {
+      "case": "scale=0.75,brightness=25,blur=0,jpeg=70",
+      "prediction": 72.7,
+      "absolute_error": 0.7
+    },
+    {
+      "case": "scale=0.75,brightness=25,blur=0,jpeg=95",
+      "prediction": 72.7,
+      "absolute_error": 0.7
+    },
+    {
+      "case": "scale=0.75,brightness=25,blur=3,jpeg=70",
+      "prediction": 72.48,
+      "absolute_error": 0.48
+    },
+    {
+      "case": "scale=0.75,brightness=25,blur=3,jpeg=95",
+      "prediction": 72.7,
+      "absolute_error": 0.7
+    },
+    {
+      "case": "scale=1.0,brightness=-25,blur=0,jpeg=70",
+      "prediction": 72.56,
+      "absolute_error": 0.56
+    },
+    {
+      "case": "scale=1.0,brightness=-25,blur=0,jpeg=95",
+      "prediction": 72.56,
+      "absolute_error": 0.56
+    },
+    {
+      "case": "scale=1.0,brightness=-25,blur=3,jpeg=70",
+      "prediction": 72.42,
+      "absolute_error": 0.42
+    },
+    {
+      "case": "scale=1.0,brightness=-25,blur=3,jpeg=95",
+      "prediction": 72.42,
+      "absolute_error": 0.42
+    },
+    {
+      "case": "scale=1.0,brightness=0,blur=0,jpeg=70",
+      "prediction": 72.56,
+      "absolute_error": 0.56
+    },
+    {
+      "case": "scale=1.0,brightness=0,blur=0,jpeg=95",
+      "prediction": 72.48,
+      "absolute_error": 0.48
+    },
+    {
+      "case": "scale=1.0,brightness=0,blur=3,jpeg=70",
+      "prediction": 72.48,
+      "absolute_error": 0.48
+    },
+    {
+      "case": "scale=1.0,brightness=0,blur=3,jpeg=95",
+      "prediction": 72.42,
+      "absolute_error": 0.42
+    },
+    {
+      "case": "scale=1.0,brightness=25,blur=0,jpeg=70",
+      "prediction": 72.56,
+      "absolute_error": 0.56
+    },
+    {
+      "case": "scale=1.0,brightness=25,blur=0,jpeg=95",
+      "prediction": 72.42,
+      "absolute_error": 0.42
+    },
+    {
+      "case": "scale=1.0,brightness=25,blur=3,jpeg=70",
+      "prediction": 72.56,
+      "absolute_error": 0.56
+    },
+    {
+      "case": "scale=1.0,brightness=25,blur=3,jpeg=95",
+      "prediction": 72.56,
+      "absolute_error": 0.56
+    },
+    {
+      "case": "scale=1.25,brightness=-25,blur=0,jpeg=70",
+      "prediction": 71.71,
+      "absolute_error": 0.29
+    },
+    {
+      "case": "scale=1.25,brightness=-25,blur=0,jpeg=95",
+      "prediction": 71.71,
+      "absolute_error": 0.29
+    },
+    {
+      "case": "scale=1.25,brightness=-25,blur=3,jpeg=70",
+      "prediction": 72.54,
+      "absolute_error": 0.54
+    },
+    {
+      "case": "scale=1.25,brightness=-25,blur=3,jpeg=95",
+      "prediction": 72.54,
+      "absolute_error": 0.54
+    },
+    {
+      "case": "scale=1.25,brightness=0,blur=0,jpeg=70",
+      "prediction": 71.71,
+      "absolute_error": 0.29
+    },
+    {
+      "case": "scale=1.25,brightness=0,blur=0,jpeg=95",
+      "prediction": 71.71,
+      "absolute_error": 0.29
+    },
+    {
+      "case": "scale=1.25,brightness=0,blur=3,jpeg=70",
+      "prediction": 72.54,
+      "absolute_error": 0.54
+    },
+    {
+      "case": "scale=1.25,brightness=0,blur=3,jpeg=95",
+      "prediction": 72.54,
+      "absolute_error": 0.54
+    },
+    {
+      "case": "scale=1.25,brightness=25,blur=0,jpeg=70",
+      "prediction": 72.36,
+      "absolute_error": 0.36
+    },
+    {
+      "case": "scale=1.25,brightness=25,blur=0,jpeg=95",
+      "prediction": 72.54,
+      "absolute_error": 0.54
+    },
+    {
+      "case": "scale=1.25,brightness=25,blur=3,jpeg=70",
+      "prediction": 72.54,
+      "absolute_error": 0.54
+    },
+    {
+      "case": "scale=1.25,brightness=25,blur=3,jpeg=95",
+      "prediction": 72.54,
+      "absolute_error": 0.54
+    }
+  ],
+  "failures": []
+}

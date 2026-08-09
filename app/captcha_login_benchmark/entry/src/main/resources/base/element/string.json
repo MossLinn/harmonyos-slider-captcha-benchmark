@@ -1,0 +1,7 @@
+{
+  "string": [
+    { "name": "app_name", "value": "验证码登录 Benchmark" },
+    { "name": "module_desc", "value": "Controlled login challenge for GUI-agent evaluation" },
+    { "name": "ability_desc", "value": "Graphical captcha and slider puzzle login" }
+  ]
+}

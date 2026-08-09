@@ -1,0 +1,81 @@
+{
+  "pipeline": "screenshot -> puzzle CV -> track CV/Layout -> drag action -> HDC -> Layout verification",
+  "all_passed": true,
+  "results": [
+    {
+      "scene": "street",
+      "ground_truth_percent": 72.0,
+      "cv_percent": 72.48,
+      "cv_absolute_error": 0.48,
+      "track": {
+        "left": 181.47,
+        "right": 1084.0,
+        "y": 1638.5
+      },
+      "drag_start": [
+        181,
+        1638
+      ],
+      "drag_end": [
+        836,
+        1638
+      ],
+      "actual_slider_percent": 72.0,
+      "execution_absolute_error": 0.0,
+      "status": "验证通过",
+      "passed": true,
+      "before_image": "street_before.png",
+      "after_image": "street_after.png"
+    },
+    {
+      "scene": "lake",
+      "ground_truth_percent": 45.0,
+      "cv_percent": 44.84,
+      "cv_absolute_error": 0.16,
+      "track": {
+        "left": 181.47,
+        "right": 1084.0,
+        "y": 1638.5
+      },
+      "drag_start": [
+        181,
+        1638
+      ],
+      "drag_end": [
+        586,
+        1638
+      ],
+      "actual_slider_percent": 44.0,
+      "execution_absolute_error": 1.0,
+      "status": "验证通过",
+      "passed": true,
+      "before_image": "lake_before.png",
+      "after_image": "lake_after.png"
+    },
+    {
+      "scene": "cafe",
+      "ground_truth_percent": 63.0,
+      "cv_percent": 62.77,
+      "cv_absolute_error": 0.23,
+      "track": {
+        "left": 181.47,
+        "right": 1084.0,
+        "y": 1638.5
+      },
+      "drag_start": [
+        181,
+        1638
+      ],
+      "drag_end": [
+        748,
+        1638
+      ],
+      "actual_slider_percent": 62.0,
+      "execution_absolute_error": 1.0,
+      "status": "验证通过",
+      "passed": true,
+      "before_image": "cafe_before.png",
+      "after_image": "cafe_after.png"
+    }
+  ]
+}
