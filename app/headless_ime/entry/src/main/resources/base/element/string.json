@@ -1,0 +1,7 @@
+{
+  "string": [
+    { "name": "module_desc", "value": "Headless input method for local UI testing" },
+    { "name": "ime_name", "value": "HmTest Headless IME" },
+    { "name": "ime_desc", "value": "Invisible keyboard controlled through an HDC-forwarded loopback socket" }
+  ]
+}
