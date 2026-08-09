@@ -9,6 +9,7 @@
 - `app/captcha_login_benchmark/`：HarmonyOS 验证码测试应用完整可构建源码。
 - `app/headless_ime/`：用于模拟器自动化的无软键盘 HarmonyOS 输入法源码与 HDC 控制脚本。
 - `prebuilt/captcha-login-benchmark-unsigned.hap`：已构建测试应用。
+- `prebuilt/headless-ime-unsigned.hap`：已构建无软键盘输入法，可直接安装到测试设备。
 - `evidence/captcha_login_benchmark/`：截图、Layout、标注图、鲁棒性结果和拖动流水线报告。
 - `ground_truth/captcha_login_benchmark.json`：测试应用功能层级 Ground Truth。
 
@@ -64,11 +65,10 @@ Bundle 名：`com.hmtest.captchalogin`。
 `app/headless_ime` 是用于 HarmonyOS 模拟器 UI 遍历的无界面输入法。编辑框获得焦点时，它保存当前 `InputClient` 并立即调用 `KeyboardController.hide()`，不创建软键盘面板。主机侧通过 HDC 的 `uitest uiInput` 向已聚焦编辑框注入文本。
 
 ```bash
-cd app/headless_ime
-python3 scripts/headless_ime.py install \
-  entry/build/default/outputs/default/entry-default-unsigned.hap
-python3 scripts/headless_ime.py choose
-python3 scripts/headless_ime.py insert '中文输入测试'
+python3 app/headless_ime/scripts/headless_ime.py install \
+  prebuilt/headless-ime-unsigned.hap
+python3 app/headless_ime/scripts/headless_ime.py choose
+python3 app/headless_ime/scripts/headless_ime.py insert '中文输入测试'
 ```
 
 Bundle 名：`com.hmtest.headlessime`。完整构建、启用和输入命令见 `app/headless_ime/README.md`。
