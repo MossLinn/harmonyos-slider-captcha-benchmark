@@ -1,0 +1,21 @@
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "HeadlessInputMethodAbility",
+    "deviceTypes": ["default", "tablet"],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "extensionAbilities": [
+      {
+        "name": "HeadlessInputMethodAbility",
+        "srcEntry": "./ets/HeadlessInputMethodAbility.ets",
+        "label": "$string:ime_name",
+        "description": "$string:ime_desc",
+        "type": "inputMethod",
+        "exported": true
+      }
+    ]
+  }
+}
