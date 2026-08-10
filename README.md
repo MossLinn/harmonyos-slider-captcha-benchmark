@@ -4,13 +4,14 @@
 
 ## 目录
 
-- `src/cv_locator/`：方形滑块、不规则拼图检测，鲁棒性评测，拖动动作生成与模拟器端到端测试。
+- `src/cv_locator/`：VLM 区域提议、任意形状源/缺口配对、鲁棒性评测、拖动动作生成与模拟器端到端测试。
 - `datasets/slider_puzzle_realistic_v2/`：4 组照片场景拼图数据、标注、mask、检测可视化及 manifest。
 - `app/captcha_login_benchmark/`：HarmonyOS 验证码测试应用完整可构建源码。
 - `app/headless_ime/`：用于模拟器自动化的无软键盘 HarmonyOS 输入法源码与 HDC 控制脚本。
 - `prebuilt/captcha-login-benchmark-unsigned.hap`：已构建测试应用。
 - `prebuilt/headless-ime-unsigned.hap`：已构建无软键盘输入法，可直接安装到测试设备。
 - `evidence/captcha_login_benchmark/`：截图、Layout、标注图、鲁棒性结果和拖动流水线报告。
+- `evidence/method_comparison/`：固定裁剪、全屏 CV、Layout、VLM 与 Oracle 的统一对比，以及多形状回归结果。
 - `ground_truth/captcha_login_benchmark.json`：测试应用功能层级 Ground Truth。
 
 ## Python 环境
@@ -78,3 +79,15 @@ Bundle 名：`com.hmtest.headlessime`。完整构建、启用和输入命令见 
 普通横向滑块的三个模拟器端到端场景均验证通过：street 72%、lake 45%、cafe 63%。详细坐标、检测结果和验证后的 UI 状态见 `evidence/captcha_login_benchmark/drag_pipeline/`。
 
 `direct_drag_pipeline/` 是自由拖动拼图的扩展实验；主横向滑块流水线仍采用源块与目标处于同一水平行的约束。
+
+## 最强混合方法
+
+优先使用 HarmonyOS Layout 提供 Canvas/面板区域；Layout 缺失、存在
+WebView 或多个候选时，使用 VLM 从完整截图提出最多三个 BBox，再由形状
+无关 CV 根据 Hu 矩轮廓相似度、尺寸、面积和同行约束完成源—目标配对。
+不要直接信任 VLM 第一候选，CV 匹配失败时应尝试下一候选。
+
+当前 12 个顶部/中部/底部位置样本中，VLM BBox + CV 端到端成功率为
+91.7%，Layout BBox + CV 为 100%；圆形、三角形、正方形和拼图形共
+16 个样本的形状无关回归成功率为 100%。详细结果见
+`evidence/method_comparison/`。
