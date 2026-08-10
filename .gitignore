@@ -1,0 +1,8 @@
+# Local credentials and model-response caches
+apikey.txt
+.env
+**/vlm_cache/
+
+# Python
+__pycache__/
+*.py[cod]

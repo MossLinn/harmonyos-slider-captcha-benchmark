@@ -1,0 +1,1657 @@
+{
+  "summaries": [
+    {
+      "method": "fixed_center_cv",
+      "samples": 12,
+      "detection_rate": 0.3333,
+      "end_to_end_success_rate": 0.3333,
+      "mean_bbox_iou": 0.3333,
+      "piece_gap_recall": 0.3333,
+      "mean_target_abs_error": 5.814,
+      "mean_total_latency_ms": 9.38,
+      "mean_vlm_provider_latency_ms": null
+    },
+    {
+      "method": "full_screen_cv",
+      "samples": 12,
+      "detection_rate": 0.0,
+      "end_to_end_success_rate": 0.0833,
+      "mean_bbox_iou": 0.25,
+      "piece_gap_recall": 1.0,
+      "mean_target_abs_error": 4.7,
+      "mean_total_latency_ms": 8.81,
+      "mean_vlm_provider_latency_ms": null
+    },
+    {
+      "method": "layout_bbox_cv",
+      "samples": 12,
+      "detection_rate": 1.0,
+      "end_to_end_success_rate": 1.0,
+      "mean_bbox_iou": 0.8182,
+      "piece_gap_recall": 1.0,
+      "mean_target_abs_error": 0.302,
+      "mean_total_latency_ms": 22.34,
+      "mean_vlm_provider_latency_ms": null
+    },
+    {
+      "method": "oracle_bbox_cv",
+      "samples": 12,
+      "detection_rate": 1.0,
+      "end_to_end_success_rate": 1.0,
+      "mean_bbox_iou": 1.0,
+      "piece_gap_recall": 1.0,
+      "mean_target_abs_error": 0.302,
+      "mean_total_latency_ms": 21.95,
+      "mean_vlm_provider_latency_ms": null
+    },
+    {
+      "method": "vlm_bbox_cv",
+      "samples": 12,
+      "detection_rate": 0.9167,
+      "end_to_end_success_rate": 0.9167,
+      "mean_bbox_iou": 0.848,
+      "piece_gap_recall": 0.9167,
+      "mean_target_abs_error": 1.69,
+      "mean_total_latency_ms": 20.87,
+      "mean_vlm_provider_latency_ms": 74409.02
+    }
+  ],
+  "rows": [
+    {
+      "sample": "bridge_top",
+      "scene": "bridge",
+      "position": "top",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(16, 11, 79, 79, 4856), (16, 11, 79, 79, 4798), (287, 382, 206, 158, 5444), (494, 382, 180, 120, 2346)]",
+      "total_latency_ms": 1.6
+    },
+    {
+      "sample": "bridge_top",
+      "scene": "bridge",
+      "position": "top",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(59, 139, 150, 323, 39471), (347, 1072, 206, 217, 6465)]",
+      "total_latency_ms": 3.4
+    },
+    {
+      "sample": "bridge_top",
+      "scene": "bridge",
+      "position": "top",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 37.82,
+      "target_abs_error": 0.18,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 18.76
+    },
+    {
+      "sample": "bridge_top",
+      "scene": "bridge",
+      "position": "top",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        129,
+        1040,
+        691
+      ],
+      "raw_bbox": [
+        59,
+        140,
+        1021,
+        680
+      ],
+      "bbox_iou": 0.9224,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 60824.76,
+      "cached": true,
+      "target_percent": 36.9,
+      "target_abs_error": 1.1,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 19.53
+    },
+    {
+      "sample": "bridge_top",
+      "scene": "bridge",
+      "position": "top",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 37.82,
+      "target_abs_error": 0.18,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 18.54
+    },
+    {
+      "sample": "bridge_center",
+      "scene": "bridge",
+      "position": "center",
+      "method": "fixed_center_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "target_percent": 37.82,
+      "target_abs_error": 0.18,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 18.67
+    },
+    {
+      "sample": "bridge_center",
+      "scene": "bridge",
+      "position": "center",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(59, 689, 150, 323, 39471), (347, 192, 206, 217, 6465)]",
+      "total_latency_ms": 2.84
+    },
+    {
+      "sample": "bridge_center",
+      "scene": "bridge",
+      "position": "center",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 37.82,
+      "target_abs_error": 0.18,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 19.97
+    },
+    {
+      "sample": "bridge_center",
+      "scene": "bridge",
+      "position": "center",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        678,
+        1040,
+        1240
+      ],
+      "raw_bbox": [
+        59,
+        689,
+        1021,
+        1229
+      ],
+      "bbox_iou": 0.9224,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 58061.78,
+      "cached": true,
+      "target_percent": 36.9,
+      "target_abs_error": 1.1,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 20.15
+    },
+    {
+      "sample": "bridge_center",
+      "scene": "bridge",
+      "position": "center",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 37.82,
+      "target_abs_error": 0.18,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 19.64
+    },
+    {
+      "sample": "bridge_bottom",
+      "scene": "bridge",
+      "position": "bottom",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 0.28
+    },
+    {
+      "sample": "bridge_bottom",
+      "scene": "bridge",
+      "position": "bottom",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(59, 1229, 150, 323, 39471), (347, 292, 206, 217, 6465)]",
+      "total_latency_ms": 2.4
+    },
+    {
+      "sample": "bridge_bottom",
+      "scene": "bridge",
+      "position": "bottom",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 37.82,
+      "target_abs_error": 0.18,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 22.26
+    },
+    {
+      "sample": "bridge_bottom",
+      "scene": "bridge",
+      "position": "bottom",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        1218,
+        1040,
+        1777
+      ],
+      "raw_bbox": [
+        59,
+        1229,
+        1021,
+        1766
+      ],
+      "bbox_iou": 0.9274,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 81088.46,
+      "cached": true,
+      "target_percent": 36.9,
+      "target_abs_error": 1.1,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 19.95
+    },
+    {
+      "sample": "bridge_bottom",
+      "scene": "bridge",
+      "position": "bottom",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 37.82,
+      "target_abs_error": 0.18,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 18.93
+    },
+    {
+      "sample": "library_top",
+      "scene": "library",
+      "position": "top",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(16, 11, 79, 79, 4856), (16, 11, 79, 79, 4798), (438, 449, 108, 91, 2235), (568, 385, 103, 114, 694)]",
+      "total_latency_ms": 1.35
+    },
+    {
+      "sample": "library_top",
+      "scene": "library",
+      "position": "top",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(71, 243, 157, 265, 14790), (814, 139, 207, 542, 3150)]",
+      "total_latency_ms": 8.54
+    },
+    {
+      "sample": "library_top",
+      "scene": "library",
+      "position": "top",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 52.15,
+      "target_abs_error": 0.15,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 24.33
+    },
+    {
+      "sample": "library_top",
+      "scene": "library",
+      "position": "top",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        41,
+        127,
+        1039,
+        683
+      ],
+      "raw_bbox": [
+        60,
+        138,
+        1020,
+        672
+      ],
+      "bbox_iou": 0.9342,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 48680.08,
+      "cached": true,
+      "target_percent": 50.92,
+      "target_abs_error": 1.08,
+      "cv_candidate_count": 11,
+      "total_latency_ms": 24.79
+    },
+    {
+      "sample": "library_top",
+      "scene": "library",
+      "position": "top",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 52.15,
+      "target_abs_error": 0.15,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 24.46
+    },
+    {
+      "sample": "library_center",
+      "scene": "library",
+      "position": "center",
+      "method": "fixed_center_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "target_percent": 52.15,
+      "target_abs_error": 0.15,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 24.41
+    },
+    {
+      "sample": "library_center",
+      "scene": "library",
+      "position": "center",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(71, 793, 157, 265, 14790), (814, 689, 207, 542, 3150)]",
+      "total_latency_ms": 7.92
+    },
+    {
+      "sample": "library_center",
+      "scene": "library",
+      "position": "center",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 52.15,
+      "target_abs_error": 0.15,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 23.48
+    },
+    {
+      "sample": "library_center",
+      "scene": "library",
+      "position": "center",
+      "method": "vlm_bbox_cv",
+      "success": false,
+      "bbox": [
+        40,
+        341,
+        1040,
+        619
+      ],
+      "raw_bbox": [
+        59,
+        346,
+        1021,
+        614
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 94533.21,
+      "cached": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 1.42
+    },
+    {
+      "sample": "library_center",
+      "scene": "library",
+      "position": "center",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 52.15,
+      "target_abs_error": 0.15,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 24.07
+    },
+    {
+      "sample": "library_bottom",
+      "scene": "library",
+      "position": "bottom",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 0.27
+    },
+    {
+      "sample": "library_bottom",
+      "scene": "library",
+      "position": "bottom",
+      "method": "full_screen_cv",
+      "success": true,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "target_percent": 52.47,
+      "target_abs_error": 0.47,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 24.72
+    },
+    {
+      "sample": "library_bottom",
+      "scene": "library",
+      "position": "bottom",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 52.15,
+      "target_abs_error": 0.15,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 23.85
+    },
+    {
+      "sample": "library_bottom",
+      "scene": "library",
+      "position": "bottom",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        1218,
+        1040,
+        1777
+      ],
+      "raw_bbox": [
+        59,
+        1229,
+        1021,
+        1766
+      ],
+      "bbox_iou": 0.9274,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 72192.67,
+      "cached": true,
+      "target_percent": 50.86,
+      "target_abs_error": 1.14,
+      "cv_candidate_count": 11,
+      "total_latency_ms": 24.78
+    },
+    {
+      "sample": "library_bottom",
+      "scene": "library",
+      "position": "bottom",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 52.15,
+      "target_abs_error": 0.15,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 24.27
+    },
+    {
+      "sample": "market_top",
+      "scene": "market",
+      "position": "top",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "target_percent": 39.14,
+      "target_abs_error": 27.86,
+      "cv_candidate_count": 4,
+      "total_latency_ms": 19.0
+    },
+    {
+      "sample": "market_top",
+      "scene": "market",
+      "position": "top",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(59, 236, 240, 445, 2425), (362, 139, 185, 313, 3386), (504, 216, 205, 239, 5114)]",
+      "total_latency_ms": 7.36
+    },
+    {
+      "sample": "market_top",
+      "scene": "market",
+      "position": "top",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 66.62,
+      "target_abs_error": 0.38,
+      "cv_candidate_count": 12,
+      "total_latency_ms": 22.71
+    },
+    {
+      "sample": "market_top",
+      "scene": "market",
+      "position": "top",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        127,
+        1040,
+        693
+      ],
+      "raw_bbox": [
+        59,
+        138,
+        1021,
+        682
+      ],
+      "bbox_iou": 0.9159,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 81714.04,
+      "cached": true,
+      "target_percent": 65.0,
+      "target_abs_error": 2.0,
+      "cv_candidate_count": 12,
+      "total_latency_ms": 24.29
+    },
+    {
+      "sample": "market_top",
+      "scene": "market",
+      "position": "top",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 66.62,
+      "target_abs_error": 0.38,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 22.52
+    },
+    {
+      "sample": "market_center",
+      "scene": "market",
+      "position": "center",
+      "method": "fixed_center_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "target_percent": 66.62,
+      "target_abs_error": 0.38,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 22.85
+    },
+    {
+      "sample": "market_center",
+      "scene": "market",
+      "position": "center",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(59, 786, 240, 445, 2425), (362, 689, 185, 313, 3386), (504, 766, 205, 239, 5114)]",
+      "total_latency_ms": 7.54
+    },
+    {
+      "sample": "market_center",
+      "scene": "market",
+      "position": "center",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 66.62,
+      "target_abs_error": 0.38,
+      "cv_candidate_count": 12,
+      "total_latency_ms": 22.83
+    },
+    {
+      "sample": "market_center",
+      "scene": "market",
+      "position": "center",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        41,
+        676,
+        1039,
+        1236
+      ],
+      "raw_bbox": [
+        60,
+        687,
+        1020,
+        1225
+      ],
+      "bbox_iou": 0.9276,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 71538.86,
+      "cached": true,
+      "target_percent": 65.08,
+      "target_abs_error": 1.92,
+      "cv_candidate_count": 12,
+      "total_latency_ms": 23.97
+    },
+    {
+      "sample": "market_center",
+      "scene": "market",
+      "position": "center",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 66.62,
+      "target_abs_error": 0.38,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 23.09
+    },
+    {
+      "sample": "market_bottom",
+      "scene": "market",
+      "position": "bottom",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 0.29
+    },
+    {
+      "sample": "market_bottom",
+      "scene": "market",
+      "position": "bottom",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "target_percent": 58.07,
+      "target_abs_error": 8.93,
+      "cv_candidate_count": 3,
+      "total_latency_ms": 24.34
+    },
+    {
+      "sample": "market_bottom",
+      "scene": "market",
+      "position": "bottom",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 66.62,
+      "target_abs_error": 0.38,
+      "cv_candidate_count": 12,
+      "total_latency_ms": 24.92
+    },
+    {
+      "sample": "market_bottom",
+      "scene": "market",
+      "position": "bottom",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        41,
+        1218,
+        1039,
+        1777
+      ],
+      "raw_bbox": [
+        60,
+        1229,
+        1020,
+        1766
+      ],
+      "bbox_iou": 0.9292,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 76023.48,
+      "cached": true,
+      "target_percent": 65.08,
+      "target_abs_error": 1.92,
+      "cv_candidate_count": 12,
+      "total_latency_ms": 24.56
+    },
+    {
+      "sample": "market_bottom",
+      "scene": "market",
+      "position": "bottom",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 66.62,
+      "target_abs_error": 0.38,
+      "cv_candidate_count": 13,
+      "total_latency_ms": 24.18
+    },
+    {
+      "sample": "station_top",
+      "scene": "station",
+      "position": "top",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[(16, 11, 79, 79, 4856), (16, 11, 79, 79, 4798)]",
+      "total_latency_ms": 1.12
+    },
+    {
+      "sample": "station_top",
+      "scene": "station",
+      "position": "top",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 5.68
+    },
+    {
+      "sample": "station_top",
+      "scene": "station",
+      "position": "top",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        800
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 78.5,
+      "target_abs_error": 0.5,
+      "cv_candidate_count": 8,
+      "total_latency_ms": 21.91
+    },
+    {
+      "sample": "station_top",
+      "scene": "station",
+      "position": "top",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        127,
+        1040,
+        693
+      ],
+      "raw_bbox": [
+        59,
+        138,
+        1021,
+        682
+      ],
+      "bbox_iou": 0.9159,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 82292.41,
+      "cached": true,
+      "target_percent": 76.59,
+      "target_abs_error": 2.41,
+      "cv_candidate_count": 9,
+      "total_latency_ms": 22.24
+    },
+    {
+      "sample": "station_top",
+      "scene": "station",
+      "position": "top",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "raw_bbox": [
+        60,
+        140,
+        1020,
+        680
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 78.5,
+      "target_abs_error": 0.5,
+      "cv_candidate_count": 8,
+      "total_latency_ms": 21.51
+    },
+    {
+      "sample": "station_center",
+      "scene": "station",
+      "position": "center",
+      "method": "fixed_center_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "target_percent": 78.5,
+      "target_abs_error": 0.5,
+      "cv_candidate_count": 8,
+      "total_latency_ms": 22.38
+    },
+    {
+      "sample": "station_center",
+      "scene": "station",
+      "position": "center",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 6.09
+    },
+    {
+      "sample": "station_center",
+      "scene": "station",
+      "position": "center",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1350
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 78.5,
+      "target_abs_error": 0.5,
+      "cv_candidate_count": 8,
+      "total_latency_ms": 22.16
+    },
+    {
+      "sample": "station_center",
+      "scene": "station",
+      "position": "center",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        680,
+        1040,
+        1240
+      ],
+      "raw_bbox": [
+        59,
+        691,
+        1021,
+        1229
+      ],
+      "bbox_iou": 0.9257,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.95,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 76150.08,
+      "cached": true,
+      "target_percent": 76.59,
+      "target_abs_error": 2.41,
+      "cv_candidate_count": 9,
+      "total_latency_ms": 23.11
+    },
+    {
+      "sample": "station_center",
+      "scene": "station",
+      "position": "center",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 78.5,
+      "target_abs_error": 0.5,
+      "cv_candidate_count": 8,
+      "total_latency_ms": 21.22
+    },
+    {
+      "sample": "station_bottom",
+      "scene": "station",
+      "position": "bottom",
+      "method": "fixed_center_cv",
+      "success": false,
+      "bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "raw_bbox": [
+        60,
+        690,
+        1020,
+        1230
+      ],
+      "bbox_iou": 0.0,
+      "contains_piece": false,
+      "contains_gap": false,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 0.28
+    },
+    {
+      "sample": "station_bottom",
+      "scene": "station",
+      "position": "bottom",
+      "method": "full_screen_cv",
+      "success": false,
+      "bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "raw_bbox": [
+        0,
+        0,
+        1080,
+        1920
+      ],
+      "bbox_iou": 0.25,
+      "contains_piece": true,
+      "contains_gap": true,
+      "error": "RuntimeError: no paired jigsaw outlines found; candidates=[]",
+      "total_latency_ms": 4.88
+    },
+    {
+      "sample": "station_bottom",
+      "scene": "station",
+      "position": "bottom",
+      "method": "layout_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1890
+      ],
+      "bbox_iou": 0.8182,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "simulated_layout",
+      "target_percent": 78.5,
+      "target_abs_error": 0.5,
+      "cv_candidate_count": 8,
+      "total_latency_ms": 20.9
+    },
+    {
+      "sample": "station_bottom",
+      "scene": "station",
+      "position": "bottom",
+      "method": "vlm_bbox_cv",
+      "success": true,
+      "bbox": [
+        40,
+        1218,
+        1040,
+        1777
+      ],
+      "raw_bbox": [
+        59,
+        1229,
+        1021,
+        1766
+      ],
+      "bbox_iou": 0.9274,
+      "contains_piece": true,
+      "contains_gap": true,
+      "confidence": 0.92,
+      "captcha_type": "slider_puzzle",
+      "vlm_latency_ms": 89808.38,
+      "cached": true,
+      "target_percent": 76.59,
+      "target_abs_error": 2.41,
+      "cv_candidate_count": 9,
+      "total_latency_ms": 21.66
+    },
+    {
+      "sample": "station_bottom",
+      "scene": "station",
+      "position": "bottom",
+      "method": "oracle_bbox_cv",
+      "success": true,
+      "bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "raw_bbox": [
+        60,
+        1230,
+        1020,
+        1770
+      ],
+      "bbox_iou": 1.0,
+      "contains_piece": true,
+      "contains_gap": true,
+      "source": "ground_truth",
+      "target_percent": 78.5,
+      "target_abs_error": 0.5,
+      "cv_candidate_count": 8,
+      "total_latency_ms": 21.0
+    }
+  ]
+}

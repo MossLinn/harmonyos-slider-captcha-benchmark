@@ -1,0 +1,190 @@
+{
+  "summary": [
+    {
+      "shape": "circle",
+      "samples": 4,
+      "success_rate": 1.0,
+      "mean_target_error": 0.37
+    },
+    {
+      "shape": "jigsaw",
+      "samples": 4,
+      "success_rate": 1.0,
+      "mean_target_error": 0.31
+    },
+    {
+      "shape": "square",
+      "samples": 4,
+      "success_rate": 1.0,
+      "mean_target_error": 0.282
+    },
+    {
+      "shape": "triangle",
+      "samples": 4,
+      "success_rate": 1.0,
+      "mean_target_error": 0.427
+    }
+  ],
+  "rows": [
+    {
+      "id": "circle_bridge",
+      "shape": "circle",
+      "success": true,
+      "target_percent": 36.83,
+      "target_error": 0.63,
+      "mean_center_error_px": 2.75,
+      "pair_score": 0.9049,
+      "shape_match_error": 0.3292
+    },
+    {
+      "id": "circle_library",
+      "shape": "circle",
+      "success": true,
+      "target_percent": 52.4,
+      "target_error": 0.19,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.0001,
+      "shape_match_error": 0.0
+    },
+    {
+      "id": "circle_market",
+      "shape": "circle",
+      "success": true,
+      "target_percent": 69.16,
+      "target_error": 0.34,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.0006,
+      "shape_match_error": 0.0
+    },
+    {
+      "id": "circle_station",
+      "shape": "circle",
+      "success": true,
+      "target_percent": 84.98,
+      "target_error": 0.32,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.0012,
+      "shape_match_error": 0.0
+    },
+    {
+      "id": "triangle_bridge",
+      "shape": "triangle",
+      "success": true,
+      "target_percent": 36.29,
+      "target_error": 0.31,
+      "mean_center_error_px": 1.25,
+      "pair_score": 0.7988,
+      "shape_match_error": 0.5915
+    },
+    {
+      "id": "triangle_library",
+      "shape": "triangle",
+      "success": true,
+      "target_percent": 52.99,
+      "target_error": 0.26,
+      "mean_center_error_px": 1.0,
+      "pair_score": 0.7743,
+      "shape_match_error": 0.0175
+    },
+    {
+      "id": "triangle_market",
+      "shape": "triangle",
+      "success": true,
+      "target_percent": 69.5,
+      "target_error": 0.6,
+      "mean_center_error_px": 1.75,
+      "pair_score": 0.0019,
+      "shape_match_error": 0.0018
+    },
+    {
+      "id": "triangle_station",
+      "shape": "triangle",
+      "success": true,
+      "target_percent": 86.15,
+      "target_error": 0.54,
+      "mean_center_error_px": 1.0,
+      "pair_score": 0.0361,
+      "shape_match_error": 0.0025
+    },
+    {
+      "id": "square_bridge",
+      "shape": "square",
+      "success": true,
+      "target_percent": 36.12,
+      "target_error": 0.12,
+      "mean_center_error_px": 0.125,
+      "pair_score": 2.439,
+      "shape_match_error": 1.6911
+    },
+    {
+      "id": "square_library",
+      "shape": "square",
+      "success": true,
+      "target_percent": 51.89,
+      "target_error": 0.26,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.0,
+      "shape_match_error": 0.0
+    },
+    {
+      "id": "square_market",
+      "shape": "square",
+      "success": true,
+      "target_percent": 69.24,
+      "target_error": 0.34,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.0,
+      "shape_match_error": 0.0
+    },
+    {
+      "id": "square_station",
+      "shape": "square",
+      "success": true,
+      "target_percent": 84.46,
+      "target_error": 0.41,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.0,
+      "shape_match_error": 0.0
+    },
+    {
+      "id": "jigsaw_bridge",
+      "shape": "jigsaw",
+      "success": true,
+      "target_percent": 36.88,
+      "target_error": 0.18,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.1483,
+      "shape_match_error": 0.0488
+    },
+    {
+      "id": "jigsaw_library",
+      "shape": "jigsaw",
+      "success": true,
+      "target_percent": 53.66,
+      "target_error": 0.2,
+      "mean_center_error_px": 0.0,
+      "pair_score": 0.0049,
+      "shape_match_error": 0.0016
+    },
+    {
+      "id": "jigsaw_market",
+      "shape": "jigsaw",
+      "success": true,
+      "target_percent": 70.7,
+      "target_error": 0.37,
+      "mean_center_error_px": 0.125,
+      "pair_score": 0.0205,
+      "shape_match_error": 0.0005
+    },
+    {
+      "id": "jigsaw_station",
+      "shape": "jigsaw",
+      "success": true,
+      "target_percent": 86.19,
+      "target_error": 0.49,
+      "mean_center_error_px": 1.625,
+      "pair_score": 0.0067,
+      "shape_match_error": 0.0037
+    }
+  ]
+}
